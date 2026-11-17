@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holt Robotic Systems</title>
+<meta name="description" content="Holt Robotic Systems LLC designs and builds automation equipment for agricultural spray drone operations. Oakland, Illinois.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f2ec;
+    --ink: #1c2321;
+    --muted: #59615d;
+    --line: #d9d5ca;
+    --field: #2f5d3a;
+    --field-dark: #1f3f27;
+    --accent: #c98a1b;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.6 "Inter", system-ui, sans-serif;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 28px 0; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 12px; font: 800 18px/1 "Archivo", sans-serif; letter-spacing: .02em; text-decoration: none; }
+  .mark { width: 34px; height: 34px; }
+  nav a { font-weight: 500; font-size: 15px; text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--ink); }
+
+  .hero {
+    background: var(--field);
+    color: #f4f2ec;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(100deg, rgba(255,255,255,.06) 0 2px, transparent 2px 46px);
+  }
+  .hero .wrap { position: relative; padding-top: 96px; padding-bottom: 104px; }
+  .eyebrow { font: 700 13px/1 "Archivo", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #e7c27a; margin-bottom: 22px; }
+  h1 { font: 800 clamp(36px, 6vw, 64px)/1.04 "Archivo", sans-serif; max-width: 14ch; letter-spacing: -.01em; }
+  .hero p { font-size: 19px; max-width: 46ch; margin-top: 22px; color: #dfe6df; }
+  .btn {
+    display: inline-block; margin-top: 34px;
+    background: var(--accent); color: #1c1608;
+    font: 700 15px/1 "Archivo", sans-serif; letter-spacing: .04em;
+    padding: 16px 24px; border-radius: 4px; text-decoration: none;
+  }
+  .btn:hover { background: #dc9a26; }
+
+  section { padding: 88px 0; }
+  h2 { font: 800 30px/1.15 "Archivo", sans-serif; margin-bottom: 14px; }
+  .lead { color: var(--muted); max-width: 60ch; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 28px; }
+  .card .num { font: 800 14px/1 "Archivo", sans-serif; color: var(--accent); letter-spacing: .1em; }
+  .card h3 { font: 700 20px/1.25 "Archivo", sans-serif; margin: 14px 0 8px; }
+  .card p { color: var(--muted); font-size: 16px; }
+
+  .about { border-top: 1px solid var(--line); }
+  .about .wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start; }
+  .facts { list-style: none; border-top: 2px solid var(--ink); }
+  .facts li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+  .facts span:first-child { color: var(--muted); }
+  .facts span:last-child { font-weight: 500; text-align: right; }
+
+  .contact { background: var(--ink); color: #f4f2ec; }
+  .contact .lead { color: #b9c0bc; }
+  .contact a.mail { font: 800 clamp(22px, 4vw, 34px)/1.2 "Archivo", sans-serif; display: inline-block; margin-top: 22px; color: #e7c27a; text-decoration: none; border-bottom: 2px solid currentColor; word-break: break-all; }
+
+  footer { background: var(--ink); color: #8d9590; font-size: 14px; border-top: 1px solid #2e3734; }
+  footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 800px) {
+    .grid { grid-template-columns: 1fr; }
+    .about .wrap { grid-template-columns: 1fr; gap: 32px; }
+    section { padding: 64px 0; }
+    .hero .wrap { padding-top: 64px; padding-bottom: 72px; }
+    .wrap { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg class="mark" viewBox="0 0 34 34" aria-hidden="true">
+        <rect width="34" height="34" rx="4" fill="#2f5d3a"/>
+        <path d="M9 8v18M25 8v18M9 17h16" stroke="#f4f2ec" stroke-width="3.2" stroke-linecap="square"/>
+        <circle cx="17" cy="17" r="3" fill="#c98a1b"/>
+      </svg>
+      HOLT ROBOTIC SYSTEMS
+    </a>
+    <nav><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Agricultural automation · Illinois</div>
+    <h1>Automation for spray drone operations.</h1>
+    <p>Holt Robotic Systems designs and builds equipment that helps agricultural spray-drone crews cover more acres with less manual work in the field.</p>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="lead">We build field equipment for the people who fly spray drones for a living.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>Built by operators</h3>
+        <p>Our team runs a commercial drone spraying operation, so we design around the real work of a spray day.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>Designed for the field</h3>
+        <p>Rugged equipment meant to live on a truck or trailer, in dust, heat and long days.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>Made in Illinois</h3>
+        <p>We design, prototype and build our products in central Illinois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div>
+      <h2>About the company</h2>
+      <p class="lead">Holt Robotic Systems is an early-stage hardware company developing its first product for agricultural drone spraying. More details will be shared as the product approaches launch.</p>
+    </div>
+    <ul class="facts">
+      <li><span>Company</span><span>Holt Robotic Systems LLC</span></li>
+      <li><span>Founded</span><span>2026</span></li>
+      <li><span>Industry</span><span>Agricultural equipment manufacturing</span></li>
+      <li><span>Location</span><span>Oakland, Illinois</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="lead">Questions, partnerships or early interest from spray operators: we'd like to hear from you.</p>
+    <a class="mail" href="mailto:zach@holtroboticsystems.com">zach@holtroboticsystems.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Holt Robotic Systems LLC</span>
+    <span>Oakland, Illinois</span>
+  </div>
+</footer>
+
+</body>
+</html>
